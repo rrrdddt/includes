@@ -153,6 +153,5 @@ function WPXCreateAccount() {
                 );
             }
         }
-
-    }
+}
 WPXCreateAccount()
